@@ -2,14 +2,14 @@
 import storybook from 'eslint-plugin-storybook'
 
 import js from '@eslint/js'
-import globals from 'globals'
+import prettier from 'eslint-config-prettier'
+import react from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
-import tseslint from 'typescript-eslint'
-import { globalIgnores } from 'eslint/config'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
-import react from 'eslint-plugin-react'
-import prettier from 'eslint-config-prettier'
+import { globalIgnores } from 'eslint/config'
+import globals from 'globals'
+import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
   [
@@ -36,9 +36,9 @@ export default tseslint.config(
         }
       },
       plugins: {
-        react,
+        react
         // import: importPlugin,
-        'simple-import-sort': simpleImportSort
+        // 'simple-import-sort': simpleImportSort
       },
       rules: {
         //react相关规则
@@ -61,36 +61,36 @@ export default tseslint.config(
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/no-empty-function': 'warn',
         // 导入排序规则
-        'simple-import-sort/imports': [
-          'error',
-          {
-            groups: [
-              // // React相关导入
-              // ['^react', '^@?\\w'],
-              // // 内部导入
-              // ['^(@|components)(/.*|$)'],
-              // // 父级目录导入
-              // ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
-              // // 同级目录导入
-              // ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
-              // // 样式导入
-              // ['^.+\\.?(css)$']
-              // 将所有导入放在一个组中，避免换行
-              [
-                '^react',
-                '^@?\\w',
-                '^(@|components)(/.*|$)',
-                '^\\.\\.(?!/?$)',
-                '^\\.\\./?$',
-                '^\\./(?=.*/)(?!/?$)',
-                '^\\.(?!/?$)',
-                '^\\./?$',
-                '^.+\\.?(css)$'
-              ]
-            ]
-          }
-        ],
-        'simple-import-sort/exports': 'error',
+        // 'simple-import-sort/imports': [
+        //   'error',
+        //   {
+        //     groups: [
+        //       // // React相关导入
+        //       // ['^react', '^@?\\w'],
+        //       // // 内部导入
+        //       // ['^(@|components)(/.*|$)'],
+        //       // // 父级目录导入
+        //       // ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+        //       // // 同级目录导入
+        //       // ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+        //       // // 样式导入
+        //       // ['^.+\\.?(css)$']
+        //       // 将所有导入放在一个组中，避免换行
+        //       [
+        //         '^react',
+        //         '^@?\\w',
+        //         '^(@|components)(/.*|$)',
+        //         '^\\.\\.(?!/?$)',
+        //         '^\\.\\./?$',
+        //         '^\\./(?=.*/)(?!/?$)',
+        //         '^\\.(?!/?$)',
+        //         '^\\./?$',
+        //         '^.+\\.?(css)$'
+        //       ]
+        //     ]
+        //   }
+        // ],
+        // 'simple-import-sort/exports': 'error',
 
         // 代码质量规则
         'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
