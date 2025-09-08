@@ -55,7 +55,9 @@ export default {
           'return',
           'theme',
           'variant',
-          'custom-variant'
+          'custom-variant',
+          'reference',
+          'utility'
         ]
       }
     ],
@@ -87,7 +89,9 @@ export default {
           'return',
           'theme',
           'variant',
-          'custom-variant'
+          'custom-variant',
+          'reference',
+          'utility'
         ]
       }
     ],

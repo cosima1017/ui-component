@@ -1,0 +1,41 @@
+@import '@/assets/styles/theme.css';
+
+@reference "tailwindcss";
+
+@utility button-border {
+  @apply border border-[#d9d9d9] hover:border-[#4096ff] hover:text-[#4096ff];
+}
+
+@layer components {
+  button {
+    @apply px-4 py-1 rounded-md cursor-pointer inline-block transition-all duration-300;
+  }
+
+  button[data-button-type='default'] {
+    @apply border border-[#d9d9d9] border-solid button-border;
+  }
+
+  button[data-button-type='primary'] {
+    @apply bg-primary text-white hover:bg-[#4096ff];
+  }
+
+  button[data-button-type='text'] {
+    @apply hover:bg-[#eee];
+  }
+
+  button[data-button-type='link'] {
+    @apply text-primary hover:text-[#4096ff];
+  }
+
+  button[data-button-type='dashed'] {
+    @apply button-border border-dashed;
+  }
+
+  button[data-block='true'] {
+    @apply w-full flex justify-center items-center;
+  }
+
+  button:has(.loading-icon) {
+    @apply px-5;
+  }
+}
