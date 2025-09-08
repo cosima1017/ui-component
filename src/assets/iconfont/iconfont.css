@@ -1,0 +1,19 @@
+@font-face {
+  src:
+    url('iconfont.woff2?t=1757317199513') format('woff2'),
+    url('iconfont.woff?t=1757317199513') format('woff'),
+    url('iconfont.ttf?t=1757317199513') format('truetype');
+  font-family: iconfont; /* Project id 5016384 */
+}
+
+.iconfont {
+  font-style: normal;
+  font-size: 16px;
+  font-family: iconfont !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-loading::before {
+  content: '\e617';
+}

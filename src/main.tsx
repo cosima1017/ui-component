@@ -1,3 +1,4 @@
+import '@/assets/iconfont/iconfont.css'
 import '@/assets/styles/index.css'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
@@ -7,6 +8,6 @@ import { Button } from './components/button'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <Button />
+    <Button loading />
   </StrictMode>
 )

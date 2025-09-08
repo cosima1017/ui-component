@@ -10,7 +10,9 @@ interface ButtonProps {
   icon?: React.ReactNode
   iconPosition?: 'start' | 'end'
   loading?: boolean
+  loadingIcon?: React.ReactNode
   disabled?: boolean
+  onClick?: () => void
 }
 
 export const Button = (props: ButtonProps) => {
@@ -23,7 +25,9 @@ export const Button = (props: ButtonProps) => {
     icon,
     iconPosition = 'start',
     loading = false,
-    disabled = false
+    disabled = false,
+    loadingIcon = <i className="iconfont icon-loading inline-block"></i>,
+    onClick
   } = props
 
   // 如果正在加载，不显示原来的图标，显示加载图标
@@ -37,17 +41,18 @@ export const Button = (props: ButtonProps) => {
       data-block={block}
       data-icon-position={iconPosition}
       disabled={disabled}
+      onClick={onClick}
     >
       {iconPosition === 'start' && (
         <>
-          {showIcon && <span className="icon">{icon}&nbsp;</span>}
-          {loading && <span className="loading-icon">&nbsp;Loading...</span>}
+          {showIcon && <span className="icon">{icon}</span>}
+          {loading && <span className="loading-icon">{loadingIcon}</span>}
         </>
       )}
       {children ?? ''}
       {iconPosition === 'end' && (
         <>
-          {loading && <span className="loading-icon">Loading...&nbsp;</span>}
+          {loading && <span className="loading-icon">&nbsp;{loadingIcon}</span>}
           {showIcon && <span className="icon">&nbsp;{icon}</span>}
         </>
       )}

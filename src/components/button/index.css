@@ -10,9 +10,19 @@
   @apply border-[#d9d9d9] hover:border-[#d9d9d9] border bg-container-disabled;
 }
 
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @layer components {
   button {
-    @apply px-4 py-1 rounded-md cursor-pointer inline-block transition-all duration-300;
+    @apply inline-flex items-center gap-2 whitespace-nowrap leading-none rounded-md cursor-pointer transition-all duration-300;
   }
 
   button[data-button-type='default'] {
@@ -40,11 +50,34 @@
   }
 
   button:has(.loading-icon) {
-    @apply px-5;
+    @apply px-5 opacity-50 pointer-events-none;
   }
 
   button:disabled {
-    @apply cursor-not-allowed text-font-disabled select-none hover:text-font-disabled;
+    @apply cursor-not-allowed text-font-disabled hover:text-font-disabled;
+  }
+
+  button .icon,
+  button .loading-icon {
+    @apply inline-flex items-center leading-none h-[1em]! flex-none;
+  }
+
+  button .icon > .iconfont,
+  button .loading-icon > .iconfont {
+    @apply align-middle leading-none !text-[1em];
+
+    vertical-align: middle;
+  }
+
+  button .icon > svg,
+  button .loading-icon > svg {
+    @apply block w-[1em] h-[1em] align-middle;
+  }
+
+  .loading-icon {
+    .iconfont {
+      animation: spin 1s linear infinite;
+    }
   }
 
   button[data-size='small'] {
@@ -52,7 +85,7 @@
   }
 
   button[data-size='medium'] {
-    @apply text-sm px-4 py-1;
+    @apply text-sm px-4 py-1.5;
   }
 
   button[data-size='large'] {
