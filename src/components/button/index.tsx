@@ -10,6 +10,7 @@ interface ButtonProps {
   icon?: React.ReactNode
   iconPosition?: 'start' | 'end'
   loading?: boolean
+  disabled?: boolean
 }
 
 export const Button = (props: ButtonProps) => {
@@ -21,7 +22,8 @@ export const Button = (props: ButtonProps) => {
     block = false,
     icon,
     iconPosition = 'start',
-    loading = false
+    loading = false,
+    disabled = false
   } = props
 
   // 如果正在加载，不显示原来的图标，显示加载图标
@@ -34,7 +36,7 @@ export const Button = (props: ButtonProps) => {
       data-size={size}
       data-block={block}
       data-icon-position={iconPosition}
-      disabled={loading} // 加载时禁用按钮
+      disabled={disabled}
     >
       {iconPosition === 'start' && (
         <>
@@ -42,7 +44,7 @@ export const Button = (props: ButtonProps) => {
           {loading && <span className="loading-icon">&nbsp;Loading...</span>}
         </>
       )}
-      {children}
+      {children ?? ''}
       {iconPosition === 'end' && (
         <>
           {loading && <span className="loading-icon">Loading...&nbsp;</span>}

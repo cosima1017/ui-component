@@ -6,29 +6,33 @@
   @apply border border-[#d9d9d9] hover:border-[#4096ff] hover:text-[#4096ff];
 }
 
+@utility button-disabled {
+  @apply border-[#d9d9d9] hover:border-[#d9d9d9] border bg-container-disabled;
+}
+
 @layer components {
   button {
     @apply px-4 py-1 rounded-md cursor-pointer inline-block transition-all duration-300;
   }
 
   button[data-button-type='default'] {
-    @apply border border-[#d9d9d9] border-solid button-border;
+    @apply border border-[#d9d9d9] border-solid button-border disabled:button-disabled;
   }
 
   button[data-button-type='primary'] {
-    @apply bg-primary text-white hover:bg-[#4096ff];
+    @apply bg-primary text-white hover:bg-[#4096ff] disabled:button-disabled;
   }
 
   button[data-button-type='text'] {
-    @apply hover:bg-[#eee];
+    @apply hover:bg-[#eee] disabled:hover:bg-transparent;
   }
 
   button[data-button-type='link'] {
-    @apply text-primary hover:text-[#4096ff];
+    @apply text-primary hover:text-[#4096ff] disabled:hover:text-font-disabled;
   }
 
   button[data-button-type='dashed'] {
-    @apply button-border border-dashed;
+    @apply button-border border-dashed disabled:button-disabled;
   }
 
   button[data-block='true'] {
@@ -37,5 +41,21 @@
 
   button:has(.loading-icon) {
     @apply px-5;
+  }
+
+  button:disabled {
+    @apply cursor-not-allowed text-font-disabled select-none hover:text-font-disabled;
+  }
+
+  button[data-size='small'] {
+    @apply text-xs px-2 py-1;
+  }
+
+  button[data-size='medium'] {
+    @apply text-sm px-4 py-1;
+  }
+
+  button[data-size='large'] {
+    @apply text-base px-6 py-2;
   }
 }

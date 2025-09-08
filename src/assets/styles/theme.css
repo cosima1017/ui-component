@@ -1,3 +1,5 @@
 @theme inline {
   --color-primary: #1677ff;
+  --color-font-disabled: rgb(0 0 0 / 25%);
+  --color-container-disabled: rgb(0 0 0 / 4%);
 }
