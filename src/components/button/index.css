@@ -91,4 +91,29 @@
   button[data-size='large'] {
     @apply text-base px-6 py-2;
   }
+
+  button:active:not(:disabled) {
+    opacity: 1;
+    transition: all 0.1s ease-out;
+  }
+
+  button[data-button-type='primary']:active:not(:disabled) {
+    box-shadow: 0 0 0 6px rgb(64 150 255 / 20%);
+  }
+
+  button[data-button-type='default']:active:not(:disabled) {
+    box-shadow: 0 0 0 6px rgb(0 0 0 / 8%);
+  }
+
+  button[data-button-type='dashed']:active:not(:disabled) {
+    box-shadow: 0 0 0 6px rgb(0 0 0 / 8%);
+  }
+
+  button[data-button-type='text']:active:not(:disabled) {
+    box-shadow: 0 0 0 6px rgb(0 0 0 / 5%);
+  }
+
+  button[data-button-type='link']:active:not(:disabled) {
+    box-shadow: 0 0 0 6px rgb(64 150 255 / 15%);
+  }
 }
