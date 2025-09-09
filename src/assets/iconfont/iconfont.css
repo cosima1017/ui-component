@@ -1,8 +1,8 @@
 @font-face {
   src:
-    url('iconfont.woff2?t=1757317199513') format('woff2'),
-    url('iconfont.woff?t=1757317199513') format('woff'),
-    url('iconfont.ttf?t=1757317199513') format('truetype');
+    url('iconfont.woff2?t=1757398116150') format('woff2'),
+    url('iconfont.woff?t=1757398116150') format('woff'),
+    url('iconfont.ttf?t=1757398116150') format('truetype');
   font-family: iconfont; /* Project id 5016384 */
 }
 
@@ -12,6 +12,10 @@
   font-family: iconfont !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jinrujiantou::before {
+  content: '\e601';
 }
 
 .icon-loading::before {

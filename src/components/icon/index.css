@@ -1,0 +1,5 @@
+@reference "tailwindcss";
+
+i {
+  @apply inline-block font-normal;
+}

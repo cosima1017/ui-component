@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "30743733",
+      "name": "进入箭头",
+      "font_class": "jinrujiantou",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
       "icon_id": "36737743",
       "name": "loading",
       "font_class": "loading",

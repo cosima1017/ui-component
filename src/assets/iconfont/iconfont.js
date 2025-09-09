@@ -1,5 +1,5 @@
 ;((window._iconfont_svg_string_5016384 =
-  '<svg><symbol id="icon-loading" viewBox="0 0 1024 1024"><path d="M512 170.666667C323.477333 170.666667 170.666667 323.477333 170.666667 512s152.810667 341.333333 341.333333 341.333333 341.333333-152.810667 341.333333-341.333333h85.333334c0 235.648-191.018667 426.666667-426.666667 426.666667S85.333333 747.648 85.333333 512 276.352 85.333333 512 85.333333v85.333334z"  ></path></symbol></svg>'),
+  '<svg><symbol id="icon-jinrujiantou" viewBox="0 0 1024 1024"><path d="M762.197333 595.854222l-400.497777 367.160889a113.777778 113.777778 0 0 1-190.634667-83.854222V144.839111a113.777778 113.777778 0 0 1 190.634667-83.854222l400.497777 367.160889a113.777778 113.777778 0 0 1 0 167.708444z" fill="#AEAEAE" ></path></symbol><symbol id="icon-loading" viewBox="0 0 1024 1024"><path d="M512 170.666667C323.477333 170.666667 170.666667 323.477333 170.666667 512s152.810667 341.333333 341.333333 341.333333 341.333333-152.810667 341.333333-341.333333h85.333334c0 235.648-191.018667 426.666667-426.666667 426.666667S85.333333 747.648 85.333333 512 276.352 85.333333 512 85.333333v85.333334z"  ></path></symbol></svg>'),
   (n => {
     var t = (e = (e = document.getElementsByTagName('script'))[
         e.length - 1
@@ -9,9 +9,9 @@
       var o,
         i,
         d,
+        a,
         c,
-        s,
-        a = function (t, e) {
+        s = function (t, e) {
           e.parentNode.insertBefore(t, e)
         }
       if (t && !n.__iconfont__svg__cssinject__) {
@@ -36,7 +36,7 @@
             (e.style.overflow = 'hidden'),
             (e = e),
             (t = document.body).firstChild
-              ? a(e, t.firstChild)
+              ? s(e, t.firstChild)
               : t.appendChild(e)))
       }),
         document.addEventListener
@@ -48,19 +48,19 @@
               document.addEventListener('DOMContentLoaded', i, !1))
           : document.attachEvent &&
             ((d = o),
-            (c = n.document),
-            (s = !1),
+            (a = n.document),
+            (c = !1),
             r(),
-            (c.onreadystatechange = function () {
-              'complete' == c.readyState && ((c.onreadystatechange = null), l())
+            (a.onreadystatechange = function () {
+              'complete' == a.readyState && ((a.onreadystatechange = null), l())
             })))
     }
     function l() {
-      s || ((s = !0), d())
+      c || ((c = !0), d())
     }
     function r() {
       try {
-        c.documentElement.doScroll('left')
+        a.documentElement.doScroll('left')
       } catch (t) {
         return void setTimeout(r, 50)
       }
