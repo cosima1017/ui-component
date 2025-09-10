@@ -20,7 +20,7 @@ export interface DropdownMenuProps {
   style?: React.CSSProperties
 }
 
-const DropdownMenu: React.FC<DropdownMenuProps> = ({
+export const DropdownMenu: React.FC<DropdownMenuProps> = ({
   trigger = 'click',
   placement = 'bottomLeft',
   children,
@@ -188,5 +188,3 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
     </div>
   )
 }
-
-export default DropdownMenu

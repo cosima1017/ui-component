@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
-import DropdownMenu, { type MenuItem } from './index'
+import { type MenuItem, DropdownMenu } from './index'
 
 const meta: Meta<typeof DropdownMenu> = {
   title: 'Components/DropdownMenu',
